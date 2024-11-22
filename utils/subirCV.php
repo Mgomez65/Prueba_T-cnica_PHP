@@ -7,7 +7,7 @@ $respuesta = [
 
         global $respuesta;
 
-        $ruta = "../uploads/cv/";
+        $ruta = "../uploads/";
         $nombre = $archivo["name"];
         $extension = pathinfo($nombre, PATHINFO_EXTENSION);
         $nuevoNombre = "CV_".$dni.".".$extension;
