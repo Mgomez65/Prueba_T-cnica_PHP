@@ -1,4 +1,4 @@
-PARA PODER PROBAR QUE ANDE IR A CONFIG Y PODER TU CONTRASEÑA DE MYSQL 
+ 
 prueba tecnica de php: 
 En donde te piden haceer esto 
 Ejercicio Backend (PHP - MySQL)
