@@ -10,7 +10,7 @@
     <div class="contenedor">
         <h2>Formulario enviar datos</h2>
 
-        <form action="../controllers/form.controlles.php" method="POST" enctype="multipart/form-data">
+        <form action="controllers/form.controlles.php" method="POST" enctype="multipart/form-data">
             <label for="Nombre">Nombre:</label>
             <input type="text" id="Nombre" name="Nombre" required><br><br>
 
