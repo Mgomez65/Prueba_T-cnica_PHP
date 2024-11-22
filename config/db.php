@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = ""; // poner contraseña BD
     $DBnombre ="PruebaTegnica";
 
     $conexion = new mysqli($servername, $username, $password,$DBnombre);

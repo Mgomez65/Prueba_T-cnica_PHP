@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         'Celular' => $_POST["Celular"],
         'Pais' => $_POST["Pais"]
     ];
+    
 
 // Validación de datos
     $validacion = validatorForm($data);
@@ -25,12 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $usuarioEmail = verUsuario("email", $data["Email"]);
     $usuarioDni = verUsuario("dni", $data["Dni"]);
 
-// SI   el dni esta registrado
+
+// SI  verificar el dni esta registrado
     if (count($usuarioDni) > 0) {
         echo "<p style='color:red;'>El DNI ya está registrado.</p>";
         return;
     }
-// SI   el email esta registrado
+
+// SI  varificar el email esta registrado
     if (count($usuarioEmail) > 0) {
         echo "<p style='color:red;'>El Email ya está registrado.</p>";
         return;

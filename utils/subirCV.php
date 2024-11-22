@@ -16,13 +16,12 @@ $respuesta = [
         $destino = $ruta.$nuevoNombre;
 
  
-
-        //se fija si la carpeta esta creada
+//se dija si la carpeta existe
         if (file_exists($ruta) == 0 ) {
             @mkdir($ruta);
         }
 
-        //lee solo archivos de pdf o Txt
+//se fija que el archivo sea de formato dispobible 
         if ( $extension !== "pdf"  && $extension !== "txt" ){
             $respuesta = [
                 'mensaje' => "El Archivo no es de tipo PDF o TXT",
@@ -32,7 +31,7 @@ $respuesta = [
            
         }
 
-        // se fija si hay otro archivo con ese nombre 
+// se fija si hay otro archivo con ese nombre 
         if (file_exists($destino)) {
              $respuesta = [
                 'mensaje' => "Ya hay un archivo con ese nombre ",
@@ -42,8 +41,9 @@ $respuesta = [
         }
 
 
-        //agretga el archivo ala carpeta
+//agretga el archivo ala carpeta
         if (@move_uploaded_file($ubicacion_Actual,$destino)) {
+
             return [
             'mensaje' => $nuevoNombre,
             'valor' => true
